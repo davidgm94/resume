@@ -1,12 +1,12 @@
 \section*{|| Most interesting personal projects ||}
-	\subsection*{\underline{Kernel from scratch: \href{https://github.com/davidgm94/rnu}{https://github.com/davidgm94/rnu}}}
-	Custom basic kernel written from scratch. Currently there is only support for RISC-V and Virt-IO GPU and block drivers, allowing the kernel to read from disk and draw the screen. Incoming scheduler and x86-64 support.
-
-	\subsection*{\underline{Compiler: \href{https://github.com/Renaissance-Software/compiler}{https://github.com/Renaissance-Software/compiler}}}
-	Last of several compilers which I wrote. Although I have used LLVM in the past, this one is fully handwritten, from the lexer to the code generation, with a LLVM-like intermediate representation. The back-end currently supports x86-64 primitively and can write MSVC and System V ABI code and PE32+ and ELF64 executables. Support for ARM64 and Mach-O is on the way.
+	\subsection*{\underline{Compiler from scratch: \href{https://github.com/birth-software/nativity}{\textbf{https://github.com/birth-software/nativity}}}}
+	
+	\paragraph{}Nativity is the last of the three compilers I have written on my my spare time. The first and the last use LLVM, while the one in the middle was fully written by me. I have also tinkered with C transpiling, primitive register allocation and very simple optimization passes. Lexer, parser and semantic analysis were always written from scratch, so no generators were used. Nativity is the most ambitious one of the three. It can run and compile on x86\_64 and aarch64, Linux and MacOS. Windows support is planned after self-hosting. Currently it also embeds clang so LLVM can be compiled with Nativity itself, with an eye on restricting dependencies as much as possible.
+	\subsection*{\underline{Kernel from scratch: \href{https://github.com/birth-software/birth}{https://github.com/birth-software/birth}}}
+	Several very basic kernels written from scratch, from which Birth is the most advanced. It supports x86\_64 and aims to be an efficient, simple and secure multikernel. There are plans to port to aarch64 and riscv64. Currently it's on hold waiting for the compiler to be ready as the operating system is planned to be rewritten in Nat.
 	
 	\subsection*{\underline{Metal bindings for Zig: \href{https://github.com/davidgm94/zig-metal}{https://github.com/davidgm94/zig-metal}}}
-	On-going work to support Apple's Metal graphics API in Zig, interoperating with C and Objective-C for the purpose.
+	Project prototype to support Apple's Metal graphics API in Zig, interoperating with C and Objective-C for the purpose.
 
-	\subsection*{\underline{Game engine: \href{https://github.com/davidgm94/glez}{https://github.com/davidgm94/glez}}}
-	Very basic game engine with 3D model rendering and GUI debugging.
+	\subsection*{\underline{Game engine sketch: \href{https://github.com/davidgm94/glez}{https://github.com/davidgm94/glez}}}
+	Very basic game engine in which 3D model rendering and GUI debugging was implemented.
